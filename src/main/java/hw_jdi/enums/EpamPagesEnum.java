@@ -2,7 +2,7 @@ package hw_jdi.enums;
 
 import java.util.Objects;
 
-public enum EPAM_PAGES {
+public enum EpamPagesEnum {
     HOME,
     CONTACT_FORM,
     SERVICE,
@@ -10,10 +10,10 @@ public enum EPAM_PAGES {
 
     public String text;
 
-    EPAM_PAGES() {
+    EpamPagesEnum() {
     }
 
-    EPAM_PAGES(String text) {
+    EpamPagesEnum(String text) {
         this.text = text;
     }
 

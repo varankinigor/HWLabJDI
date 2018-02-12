@@ -3,6 +3,8 @@ package hw_jdi.entities;
 import java.util.HashMap;
 import java.util.Map;
 
+import static hw_jdi.enums.MetalsColorsKeysEnum.*;
+
 public class MetalsColors {
     public Integer[] summary;
     public String[] elements;
@@ -28,11 +30,11 @@ public class MetalsColors {
 
     public Map<String, String[]> getResultLog() {
         Map<String, String[]> result = new HashMap<>();
-        result.put("Summary", new String[]{Integer.toString(summary[0] + summary[1])});
-        result.put("Elements", elements);
-        result.put("Color", new String[]{color});
-        result.put("Metal", new String[]{metal});
-        result.put("Vegetables", vegetables);
+        result.put(SUMMARY.text, new String[]{Integer.toString(summary[0] + summary[1])});
+        result.put(ELEMENTS.text, elements);
+        result.put(COLORS.text, new String[]{color});
+        result.put(METAL.text, new String[]{metal});
+        result.put(VEGETABLES.text, vegetables);
         return result;
     }
 }

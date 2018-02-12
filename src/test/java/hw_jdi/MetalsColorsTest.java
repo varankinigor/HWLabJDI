@@ -2,7 +2,7 @@ package hw_jdi;
 
 import hw_jdi.entities.MetalsColors;
 import hw_jdi.entities.User;
-import hw_jdi.enums.EPAM_PAGES;
+import hw_jdi.enums.EpamPagesEnum;
 import hw_jdi.epam_site.EpamSite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -22,7 +22,7 @@ public class MetalsColorsTest extends TestInit {
         EpamSite.homePage.headerSection.login(new User());
 
         //2 Open Metals & Colors page by Header headerMenu
-        EpamSite.homePage.headerSection.headerMenu.mySelect(EPAM_PAGES.METALS_COLORS);
+        EpamSite.homePage.headerSection.headerMenu.mySelect(EpamPagesEnum.METALS_COLORS);
         EpamSite.metalsColorsPage.checkOpened();
 
         //3 Fill form Metals & Colors by data
