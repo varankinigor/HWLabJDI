@@ -1,9 +1,9 @@
-package hw_jdi.entities;
+package entities;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static hw_jdi.enums.MetalsColorsKeysEnum.*;
+import static enums.MetalsColorsKeysEnum.*;
 
 public class MetalsColors {
     public Integer[] summary;

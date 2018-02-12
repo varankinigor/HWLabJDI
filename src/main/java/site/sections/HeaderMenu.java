@@ -1,7 +1,7 @@
-package hw_jdi.epam_site.sections;
+package site.sections;
 
 import com.epam.jdi.uitests.web.selenium.elements.complex.Menu;
-import hw_jdi.enums.EpamPagesEnum;
+import enums.EpamPagesEnum;
 
 public class HeaderMenu extends Menu {
 

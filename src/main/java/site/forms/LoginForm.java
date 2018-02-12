@@ -1,9 +1,9 @@
-package hw_jdi.epam_site.forms;
+package site.forms;
 
 import com.epam.jdi.uitests.web.selenium.elements.common.Button;
 import com.epam.jdi.uitests.web.selenium.elements.common.TextField;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
-import hw_jdi.entities.User;
+import entities.User;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginForm extends Form<User> {

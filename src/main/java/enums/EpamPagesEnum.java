@@ -1,4 +1,4 @@
-package hw_jdi.enums;
+package enums;
 
 import java.util.Objects;
 

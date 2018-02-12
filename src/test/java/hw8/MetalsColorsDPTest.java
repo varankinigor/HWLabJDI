@@ -1,14 +1,17 @@
-package hw_jdi.hw8;
+package hw8;
 
-import hw_jdi.entities.MetalsColors;
-import hw_jdi.entities.User;
-import hw_jdi.enums.EpamPagesEnum;
-import hw_jdi.epam_site.EpamSite;
-import hw_jdi.test_base.TestInit;
-import hw_jdi.utils.DataLoader;
-import org.testng.annotations.*;
+import entities.MetalsColors;
+import entities.User;
+import enums.EpamPagesEnum;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import site.EpamSite;
+import test_base.TestInit;
+import utils.DataLoader;
 
-@Listeners(hw_jdi.listeners.AllureAttachmentListener.class)
+//@Listeners(listeners.AllureAttachmentListener.class)
 public class MetalsColorsDPTest extends TestInit {
     @BeforeMethod
     public void openHomePage() {

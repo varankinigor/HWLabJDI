@@ -1,4 +1,4 @@
-package hw_jdi.listeners;
+package listeners;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

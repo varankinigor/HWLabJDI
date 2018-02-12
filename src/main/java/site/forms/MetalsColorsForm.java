@@ -1,4 +1,4 @@
-package hw_jdi.epam_site.forms;
+package site.forms;
 
 import com.epam.jdi.uitests.web.selenium.elements.common.Button;
 import com.epam.jdi.uitests.web.selenium.elements.complex.CheckList;
@@ -8,7 +8,7 @@ import com.epam.jdi.uitests.web.selenium.elements.complex.RadioButtons;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JComboBox;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JDropdown;
-import hw_jdi.entities.MetalsColors;
+import entities.MetalsColors;
 import org.openqa.selenium.support.FindBy;
 
 public class MetalsColorsForm extends Form {

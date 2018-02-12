@@ -1,10 +1,10 @@
-package hw_jdi.utils;
+package utils;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import hw_jdi.entities.MetalsColors;
+import entities.MetalsColors;
 import lombok.SneakyThrows;
 
 import java.io.FileReader;

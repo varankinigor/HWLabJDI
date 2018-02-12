@@ -1,7 +1,7 @@
-package hw_jdi.epam_site.pages;
+package site.pages;
 
-import hw_jdi.epam_site.forms.MetalsColorsForm;
-import hw_jdi.epam_site.sections.MetalsColorsResultSection;
+import site.forms.MetalsColorsForm;
+import site.sections.MetalsColorsResultSection;
 
 public class MetalsColorsPage extends CommonPage {
     public MetalsColorsForm metalsColorsForm;

@@ -1,4 +1,4 @@
-package hw_jdi.entities;
+package entities;
 
 import com.epam.commons.DataClass;
 

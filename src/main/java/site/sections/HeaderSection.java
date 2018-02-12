@@ -1,12 +1,12 @@
-package hw_jdi.epam_site.sections;
+package site.sections;
 
 import com.codeborne.selenide.Condition;
 import com.epam.jdi.uitests.web.selenium.elements.common.Button;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Section;
-import hw_jdi.entities.User;
-import hw_jdi.epam_site.forms.LoginForm;
+import entities.User;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.allure.annotations.Step;
+import site.forms.LoginForm;
 
 public class HeaderSection extends Section {
 

@@ -1,11 +1,11 @@
-package hw_jdi.epam_site.sections;
+package site.sections;
 
 import com.epam.jdi.uitests.web.selenium.elements.complex.TextList;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Section;
 import com.epam.web.matcher.testng.Assert;
-import hw_jdi.entities.MetalsColors;
-import hw_jdi.utils.LogWork;
+import entities.MetalsColors;
 import org.openqa.selenium.support.FindBy;
+import utils.LogWork;
 
 import java.util.Map;
 

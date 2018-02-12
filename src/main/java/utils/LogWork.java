@@ -1,7 +1,7 @@
-package hw_jdi.utils;
+package utils;
 
 import com.epam.jdi.uitests.web.selenium.elements.complex.TextList;
-import hw_jdi.enums.MetalsColorsKeysEnum;
+import enums.MetalsColorsKeysEnum;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class LogWork {
 
-    public static Map<String, String[]> prepareLog (TextList textList) {
+    public static Map<String, String[]> prepareLog(TextList textList) {
         Map<String, String[]> resultLog = new HashMap<>();
 
         List<String> logList = textList.getTextList();

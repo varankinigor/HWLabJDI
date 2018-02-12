@@ -1,10 +1,10 @@
-package hw_jdi.epam_site;
+package site;
 
 import com.epam.jdi.uitests.web.selenium.elements.composite.WebSite;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JPage;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JSite;
-import hw_jdi.epam_site.pages.HomePage;
-import hw_jdi.epam_site.pages.MetalsColorsPage;
+import site.pages.HomePage;
+import site.pages.MetalsColorsPage;
 
 @JSite("https://epam.github.io/JDI")
 public class EpamSite extends WebSite {
