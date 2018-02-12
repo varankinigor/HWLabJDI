@@ -32,7 +32,7 @@ public class MetalsColors {
         Map<String, String[]> result = new HashMap<>();
         result.put(SUMMARY.text, new String[]{Integer.toString(summary[0] + summary[1])});
         result.put(ELEMENTS.text, elements);
-        result.put(COLORS.text, new String[]{color});
+        result.put(COLOR.text, new String[]{color});
         result.put(METAL.text, new String[]{metal});
         result.put(VEGETABLES.text, vegetables);
         return result;

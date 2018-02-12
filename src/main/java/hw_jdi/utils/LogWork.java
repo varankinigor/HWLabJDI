@@ -18,6 +18,7 @@ public class LogWork {
             for (MetalsColorsKeysEnum key : MetalsColorsKeysEnum.values()) {
                 if (log.startsWith(key.text)) {
                     resultLog.put(key.text, log.substring(key.text.length() + 2).split(", "));
+                    break;
                 }
             }
         }

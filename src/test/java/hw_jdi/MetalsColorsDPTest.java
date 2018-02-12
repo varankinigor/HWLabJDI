@@ -41,7 +41,10 @@ public class MetalsColorsDPTest extends TestInit {
         //3 Fill form Metals & Colors by DataProvider
         EpamSite.metalsColorsPage.metalsColorsForm.fillMetalsColorsForm(metalsColors);
 
-        //4 Result sections should contains data from DataProvider
+        //4 Submit form Metals & Colors
+        EpamSite.metalsColorsPage.metalsColorsForm.submitButton.click();
+
+        //5 Result sections should contains data from DataProvider
         EpamSite.metalsColorsPage.metalsColorsResultSection.checkResultSection(metalsColors);
     }
 }

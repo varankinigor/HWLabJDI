@@ -3,7 +3,7 @@ package hw_jdi.enums;
 public enum MetalsColorsKeysEnum {
     SUMMARY("Summary"),
     ELEMENTS("Elements"),
-    COLORS("Colors"),
+    COLOR("Color"),
     METAL("Metal"),
     VEGETABLES("Vegetables");
 

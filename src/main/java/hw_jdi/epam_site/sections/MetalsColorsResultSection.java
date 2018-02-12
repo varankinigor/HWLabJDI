@@ -18,7 +18,9 @@ public class MetalsColorsResultSection extends Section {
         Map<String, String[]> expectedLogMap = metalsColors.getResultLog();
         Map<String, String[]> actualLogMap = LogWork.prepareLog(actualResultTextList);
 
-        for (String key : actualLogMap.keySet()) {
+        Assert.arrayEquals(actualLogMap.keySet().toArray(), expectedLogMap.keySet().toArray());
+
+        for (String key : expectedLogMap.keySet()) {
             Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key), "Wrong " + key);
         }
     }
