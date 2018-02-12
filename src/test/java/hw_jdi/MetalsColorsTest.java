@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 //@Listeners(hw_jdi.listeners.AllureAttachmentListener.class)
-public class MetalsColorsTest extends TestInit{
+public class MetalsColorsTest extends TestInit {
 
     @BeforeMethod
     public void openHomePage() {

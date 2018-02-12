@@ -8,13 +8,16 @@ import hw_jdi.epam_site.forms.LoginForm;
 import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.allure.annotations.Step;
 
-public class HeaderSection extends Section{
+public class HeaderSection extends Section {
 
     @FindBy(css = ".m-l8")
     public HeaderMenu headerMenu;
 
     @FindBy(css = ".profile-photo")
     public Button expanderButton;
+
+    @FindBy(css = ".logout .btn-login")
+    public Button logoutButton;
 
     public LoginForm loginForm;
 
@@ -23,5 +26,12 @@ public class HeaderSection extends Section{
         expanderButton.click();
         loginForm.loginAs(user);
         expanderButton.should(Condition.text(user.name));
+    }
+
+    @Step
+    public void logout() {
+
+        expanderButton.click();
+        logoutButton.click();
     }
 }

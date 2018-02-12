@@ -21,7 +21,7 @@ public class MetalsColorsResultSection extends Section {
         Map<String, String[]> actualLog = new HashMap<>();
 
         List<String> actualLogList = resultList.getTextList();
-        for(String actualLogString : actualLogList) {
+        for (String actualLogString : actualLogList) {
             for (String key : expectedLog.keySet()) {
                 if (actualLogString.startsWith(key)) {
                     actualLog.put(key, actualLogString.substring(key.length() + 2).split(", "));
@@ -29,7 +29,7 @@ public class MetalsColorsResultSection extends Section {
             }
         }
 
-        for(String key : actualLog.keySet()) {
+        for (String key : actualLog.keySet()) {
             Assert.arrayEquals(actualLog.get(key), expectedLog.get(key), "Wrong " + key);
         }
     }
