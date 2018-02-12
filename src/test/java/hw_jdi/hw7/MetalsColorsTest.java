@@ -1,13 +1,15 @@
-package hw_jdi;
+package hw_jdi.hw7;
 
 import hw_jdi.entities.MetalsColors;
 import hw_jdi.entities.User;
 import hw_jdi.enums.EpamPagesEnum;
 import hw_jdi.epam_site.EpamSite;
+import hw_jdi.test_base.TestInit;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-//@Listeners(hw_jdi.listeners.AllureAttachmentListener.class)
+@Listeners(hw_jdi.listeners.AllureAttachmentListener.class)
 public class MetalsColorsTest extends TestInit {
 
     @BeforeMethod

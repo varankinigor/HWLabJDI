@@ -3,7 +3,8 @@
 <suite name="Test suite" parallel="methods" thread-count="1">
     <test name="Tests" preserve-order="true">
         <classes>
-            <class name="hw_jdi.MetalsColorsTest"/>
+            <class name="hw_jdi.hw7.MetalsColorsTest"/>
+            <class name="hw_jdi.hw8.MetalsColorsDPTest"/>
         </classes>
     </test>
 </suite>
