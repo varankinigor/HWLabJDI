@@ -4,6 +4,7 @@ package hw7;
 import entities.MetalsColors;
 import entities.User;
 import enums.EpamPagesEnum;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import site.EpamSite;
@@ -16,6 +17,11 @@ public class MetalsColorsTest extends TestInit {
     public void openHomePage() {
         EpamSite.homePage.open();
         EpamSite.homePage.checkOpened();
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        EpamSite.metalsColorsPage.headerSection.logout();
     }
 
     @Test
@@ -37,5 +43,4 @@ public class MetalsColorsTest extends TestInit {
         //5 Check result section
         EpamSite.metalsColorsPage.metalsColorsResultSection.checkResultSection(defaultMetalsColors);
     }
-
 }

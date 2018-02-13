@@ -14,32 +14,32 @@ import org.openqa.selenium.support.FindBy;
 public class MetalsColorsForm extends Form {
 
     @FindBy(css = "#odds-selector p")
-    public RadioButtons oddsSelector;
+    private RadioButtons oddsSelector;
 
     @FindBy(css = "#even-selector p")
-    public RadioButtons evenSelector;
+    private RadioButtons evenSelector;
 
     @FindBy(css = "#elements-checklist p")
-    public CheckList elementsCheckList;
+    private CheckList elementsCheckList;
 
     @JDropdown(
             root = @FindBy(css = ".colors"),
             list = @FindBy(tagName = "li")
     )
-    public Dropdown colorsDropdown;
+    private Dropdown colorsDropdown;
 
     @JComboBox(
             root = @FindBy(css = ".metals"),
             list = @FindBy(tagName = "li"),
             expand = @FindBy(css = ".caret")
     )
-    public ComboBox metalsComboBox;
+    private ComboBox metalsComboBox;
 
     @FindBy(css = ".salad .btn")
-    public Button expandVegetablesButton;
+    private Button expandVegetablesButton;
 
     @FindBy(css = ".salad ul li")
-    public CheckList vegetablesCheckList;
+    private CheckList vegetablesCheckList;
 
     @FindBy(css = "#submit-button")
     public Button submitButton;

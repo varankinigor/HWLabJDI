@@ -20,14 +20,6 @@ public class MetalsColors {
         vegetables = new String[]{"Cucumber", "Tomato"};
     }
 
-    public MetalsColors(Integer[] summary, String[] elements, String color, String metals, String[] vegetables) {
-        this.summary = summary;
-        this.elements = elements;
-        this.color = color;
-        this.metal = metals;
-        this.vegetables = vegetables;
-    }
-
     public Map<String, String[]> getResultLog() {
         Map<String, String[]> result = new HashMap<>();
         result.put(SUMMARY.text, new String[]{Integer.toString(summary[0] + summary[1])});

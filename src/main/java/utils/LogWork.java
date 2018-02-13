@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 public class LogWork {
-
     public static Map<String, String[]> prepareLog(TextList textList) {
         Map<String, String[]> resultLog = new HashMap<>();
 
