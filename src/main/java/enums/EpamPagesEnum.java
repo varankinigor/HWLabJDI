@@ -8,6 +8,7 @@ public enum EpamPagesEnum {
     SERVICE,
     METALS_COLORS("Metals & Colors");
 
+    // TODO should be private !!
     public String text;
 
     EpamPagesEnum() {

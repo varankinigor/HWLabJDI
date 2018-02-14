@@ -6,6 +6,7 @@ import com.epam.jdi.uitests.web.selenium.elements.complex.ComboBox;
 import com.epam.jdi.uitests.web.selenium.elements.complex.Dropdown;
 import com.epam.jdi.uitests.web.selenium.elements.complex.RadioButtons;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
+import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JComboBox;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JDropdown;
 import entities.MetalsColors;
@@ -54,6 +55,8 @@ public class MetalsColorsForm extends Form {
 
         metalsComboBox.select(metalsColors.metal);
 
+        // TODO you should create you own UI Element for this purpose...
+        // TODO maybe it will be better to extends it from Dropdown or smth else ?
         expandVegetablesButton.click();
         if (!expandVegetablesButton.getText().equals("")) {
             String[] chosenVegetables = expandVegetablesButton.getText().split(", ");

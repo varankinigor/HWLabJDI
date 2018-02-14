@@ -30,6 +30,8 @@ public class MetalsColorsDPTest extends TestInit {
         return dataLoader.data;
     }
 
+    // TODO only last data set can lead the test to failure...
+    // TODO besides, error has to be in EpamSite.metalsColorsPage.metalsColorsResultSection::checkResultSection method...
     @Test(dataProvider = "getData")
     public void submitMetalsColorsWithDP(MetalsColors metalsColors) {
         //1 Login on JDI site as User

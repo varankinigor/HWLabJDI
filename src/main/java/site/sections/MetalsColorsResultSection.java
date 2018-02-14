@@ -21,6 +21,7 @@ public class MetalsColorsResultSection extends Section {
         Assert.arrayEquals(actualLogMap.keySet().toArray(), expectedLogMap.keySet().toArray());
 
         for (String key : expectedLogMap.keySet()) {
+            // TODO message should contains expected and actual results...
             Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key), "Wrong " + key);
         }
     }

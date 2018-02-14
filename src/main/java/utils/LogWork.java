@@ -13,6 +13,7 @@ public class LogWork {
 
         List<String> logList = textList.getTextList();
 
+        // TODO soo complicated, but okay, if you're enjoying this...
         for (String log : logList) {
             for (MetalsColorsKeysEnum key : MetalsColorsKeysEnum.values()) {
                 if (log.startsWith(key.text)) {

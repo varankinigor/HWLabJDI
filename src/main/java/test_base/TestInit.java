@@ -9,6 +9,7 @@ import static java.lang.System.setProperty;
 public class TestInit extends TestNGBase {
     @BeforeSuite(alwaysRun = true)
     public static void setUp() {
+        // TODO and where is the driver ??
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         WebSite.init(site.EpamSite.class);
     }
