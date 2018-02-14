@@ -1,7 +1,10 @@
 package enums;
 
+import lombok.NoArgsConstructor;
+
 import java.util.Objects;
 
+@NoArgsConstructor
 public enum EpamPagesEnum {
     HOME,
     CONTACT_FORM,
@@ -9,10 +12,8 @@ public enum EpamPagesEnum {
     METALS_COLORS("Metals & Colors");
 
     // TODO should be private !!
-    public String text;
-
-    EpamPagesEnum() {
-    }
+    // done
+    private String text;
 
     EpamPagesEnum(String text) {
         this.text = text;

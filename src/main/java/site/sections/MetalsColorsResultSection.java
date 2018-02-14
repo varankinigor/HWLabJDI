@@ -12,7 +12,7 @@ import java.util.Map;
 public class MetalsColorsResultSection extends Section {
 
     @FindBy(css = ".results li")
-    public TextList actualResultTextList;
+    private TextList actualResultTextList;
 
     public void checkResultSection(MetalsColors metalsColors) {
         Map<String, String[]> expectedLogMap = metalsColors.getResultLog();
@@ -22,7 +22,8 @@ public class MetalsColorsResultSection extends Section {
 
         for (String key : expectedLogMap.keySet()) {
             // TODO message should contains expected and actual results...
-            Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key), "Wrong " + key);
+            // done
+            Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key),"Actual key: " + actualLogMap.get(key) + " Expected key: " + expectedLogMap.get(key));
         }
     }
 }

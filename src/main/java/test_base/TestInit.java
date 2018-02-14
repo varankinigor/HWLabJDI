@@ -10,6 +10,8 @@ public class TestInit extends TestNGBase {
     @BeforeSuite(alwaysRun = true)
     public static void setUp() {
         // TODO and where is the driver ??
+        // gitignore ate it
+        // done
         setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         WebSite.init(site.EpamSite.class);
     }

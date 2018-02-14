@@ -7,6 +7,7 @@ public class HeaderMenu extends Menu {
 
     public void mySelect(EpamPagesEnum page) {
         // TODO i guess page.toString will be better
-        super.select(page.text);
+        // done
+        super.select(page.toString());
     }
 }

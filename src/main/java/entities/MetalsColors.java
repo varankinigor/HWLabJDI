@@ -1,5 +1,7 @@
 package entities;
 
+import enums.MetalsColorsDataEnum;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,15 +11,15 @@ public class MetalsColors {
     public Integer[] summary;
     public String[] elements;
     public String color;
-    public String metal;
+    public String metals;
     public String[] vegetables;
 
-    public MetalsColors() {
-        summary = new Integer[]{3, 8};
-        elements = new String[]{"Water", "Fire"};
-        color = "Red";
-        metal = "Selen";
-        vegetables = new String[]{"Cucumber", "Tomato"};
+    public MetalsColors(MetalsColorsDataEnum metalsColorsDataEnum) {
+        this.summary = metalsColorsDataEnum.summary;
+        this.elements = metalsColorsDataEnum.elements;
+        this.color = metalsColorsDataEnum.color;
+        this.metals = metalsColorsDataEnum.metals;
+        this.vegetables = metalsColorsDataEnum.vegetables;
     }
 
     public Map<String, String[]> getResultLog() {
@@ -25,7 +27,7 @@ public class MetalsColors {
         result.put(SUMMARY.text, new String[]{Integer.toString(summary[0] + summary[1])});
         result.put(ELEMENTS.text, elements);
         result.put(COLOR.text, new String[]{color});
-        result.put(METAL.text, new String[]{metal});
+        result.put(METAL.text, new String[]{metals});
         result.put(VEGETABLES.text, vegetables);
         return result;
     }

@@ -6,7 +6,6 @@ import com.epam.jdi.uitests.web.selenium.elements.complex.ComboBox;
 import com.epam.jdi.uitests.web.selenium.elements.complex.Dropdown;
 import com.epam.jdi.uitests.web.selenium.elements.complex.RadioButtons;
 import com.epam.jdi.uitests.web.selenium.elements.composite.Form;
-import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.JFindBy;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JComboBox;
 import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.objects.JDropdown;
 import entities.MetalsColors;
@@ -36,14 +35,17 @@ public class MetalsColorsForm extends Form {
     )
     private ComboBox metalsComboBox;
 
-    @FindBy(css = ".salad .btn")
-    private Button expandVegetablesButton;
+    @JDropdown(
 
-    @FindBy(css = ".salad ul li")
-    private CheckList vegetablesCheckList;
+            root = @FindBy(css = "#salad-dropdown"),
+            list = @FindBy(css = "ul li"),
+            value = @FindBy(css = ".btn"),
+            expand= @FindBy(css = ".caret")
+    )
+    private Dropdown vegetablesDropdown;
 
     @FindBy(css = "#submit-button")
-    public Button submitButton;
+    private Button submitButton;
 
     public void fillMetalsColorsForm(MetalsColors metalsColors) {
         oddsSelector.select(metalsColors.summary[0].toString());
@@ -53,17 +55,20 @@ public class MetalsColorsForm extends Form {
 
         colorsDropdown.select(metalsColors.color);
 
-        metalsComboBox.select(metalsColors.metal);
+        metalsComboBox.select(metalsColors.metals);
 
         // TODO you should create you own UI Element for this purpose...
         // TODO maybe it will be better to extends it from Dropdown or smth else ?
-        expandVegetablesButton.click();
-        if (!expandVegetablesButton.getText().equals("")) {
-            String[] chosenVegetables = expandVegetablesButton.getText().split(", ");
-            for (String vegetable : chosenVegetables) {
-                vegetablesCheckList.check(vegetable);
+        // done
+        if (!vegetablesDropdown.getValue().equals("")) {
+            for (String vegetable : vegetablesDropdown.getText().split(", ")) {
+                vegetablesDropdown.select(vegetable);
             }
         }
-        vegetablesCheckList.check(metalsColors.vegetables);
+        for (String vegetable : metalsColors.vegetables) {
+            vegetablesDropdown.select(vegetable);
+        }
+
+        submitButton.click();
     }
 }
