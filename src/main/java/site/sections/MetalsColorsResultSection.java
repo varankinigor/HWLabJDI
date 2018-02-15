@@ -26,6 +26,7 @@ public class MetalsColorsResultSection extends Section {
             // done
             Arrays.sort(actualLogMap.get(key));
             Arrays.sort(expectedLogMap.get(key));
+            // TODO done ?? Where is the ERROR message with data ? You just get "java.lang.AssertionError: Check that Collections are equal failed" !!
             Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key));
         }
     }
