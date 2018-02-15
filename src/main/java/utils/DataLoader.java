@@ -24,6 +24,7 @@ public class DataLoader {
         // TODO why don't you return just a metalsColorsData.values() ? What a story, Mark ?
         // Danila said to use two-dimensional array on data provider, after one student used one-dimensional,
         // so i thought it's kind of rule. Maybe i don't understand him correctly
+        // TODO is that make a sense in this particular case ?
         data = new Object[metalsColorsData.size()][];
         Object[] values = metalsColorsData.values().toArray();
         for (int i = 0; i < values.length; i++) {

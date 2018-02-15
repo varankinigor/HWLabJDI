@@ -20,7 +20,14 @@ public class MetalsColorsForm extends Form {
     private RadioButtons evenSelector;
 
     @FindBy(css = "#elements-checklist p")
-    private CheckList elementsCheckList;
+    private CheckList elementsCheckList = new CheckList() {
+        @Override
+        protected void selectListAction(String... names) {
+            if (names.length != 0) {
+                super.selectListAction(names);
+            }
+        }
+    };
 
     @JDropdown(
             root = @FindBy(css = ".colors"),
@@ -36,7 +43,6 @@ public class MetalsColorsForm extends Form {
     private ComboBox metalsComboBox;
 
     @JDropdown(
-
             root = @FindBy(css = "#salad-dropdown"),
             list = @FindBy(css = "ul li"),
             value = @FindBy(css = ".btn"),
@@ -52,23 +58,30 @@ public class MetalsColorsForm extends Form {
             oddsSelector.select(metalsColors.getSummary()[0].toString());
             evenSelector.select(metalsColors.getSummary()[1].toString());
         }
-        if (metalsColors.getElements().length != 0) {
-            elementsCheckList.check(metalsColors.getElements());
-        }
+
+//        if (metalsColors.getElements().length != 0) {
+//            elementsCheckList.check(metalsColors.getElements());
+//        }
+        elementsCheckList.check(metalsColors.getElements());
+
         if (metalsColors.getColor().length() != 0) {
             colorsDropdown.select(metalsColors.getColor());
         }
+
         if (metalsColors.getMetals().length() != 0) {
             metalsComboBox.select(metalsColors.getMetals());
         }
         // TODO you should create you own UI Element for this purpose...
         // TODO maybe it will be better to extends it from Dropdown or smth else ?
         // done
+        // TODO what dou you mean 'done' ? I do not see any difference...
+        // TODO take a look on elementsCheckList, i refactored it for you...
         if (!vegetablesDropdown.getValue().equals("")) {
             for (String vegetable : vegetablesDropdown.getText().split(", ")) {
                 vegetablesDropdown.select(vegetable);
             }
         }
+
         for (String vegetable : metalsColors.getVegetables()) {
             vegetablesDropdown.select(vegetable);
         }
