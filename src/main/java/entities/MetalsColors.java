@@ -1,26 +1,29 @@
 package entities;
 
-import enums.MetalsColorsDataEnum;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static enums.MetalsColorsKeysEnum.*;
 
+@Getter
+@AllArgsConstructor
 public class MetalsColors {
-    public Integer[] summary;
-    public String[] elements;
-    public String color;
-    public String metals;
-    public String[] vegetables;
+    private Integer[] summary;
+    private String[] elements;
+    private String color;
+    private String metals;
+    private String[] vegetables;
 
-    public MetalsColors(MetalsColorsDataEnum metalsColorsDataEnum) {
-        this.summary = metalsColorsDataEnum.summary;
-        this.elements = metalsColorsDataEnum.elements;
-        this.color = metalsColorsDataEnum.color;
-        this.metals = metalsColorsDataEnum.metals;
-        this.vegetables = metalsColorsDataEnum.vegetables;
-    }
+    public static final MetalsColors DEFAULT_DATA = new MetalsColors (
+            new Integer[]{3, 8},
+            new String[]{"Water", "Fire"},
+            "Red",
+            "Selen",
+            new String[]{"Cucumber", "Tomato"}
+    );
 
     public Map<String, String[]> getResultLog() {
         Map<String, String[]> result = new HashMap<>();

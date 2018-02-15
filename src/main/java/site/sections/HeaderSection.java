@@ -14,23 +14,22 @@ public class HeaderSection extends Section {
     public HeaderMenu headerMenu;
 
     @FindBy(css = ".profile-photo")
-    public Button expanderButton;
+    private Button expanderButton;
 
     @FindBy(css = ".logout .btn-login")
-    public Button logoutButton;
+    private Button logoutButton;
 
-    public LoginForm loginForm;
+    private LoginForm loginForm;
 
     @Step
     public void login(User user) {
         expanderButton.click();
         loginForm.loginAs(user);
-        expanderButton.should(Condition.text(user.name));
+        expanderButton.should(Condition.text(user.getName()));
     }
 
     @Step
     public void logout() {
-
         expanderButton.click();
         logoutButton.click();
     }

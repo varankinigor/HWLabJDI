@@ -4,8 +4,6 @@ package hw7;
 import entities.MetalsColors;
 import entities.User;
 import enums.EpamPagesEnum;
-import enums.MetalsColorsDataEnum;
-import enums.UserEnum;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,8 +29,7 @@ public class MetalsColorsTest extends TestInit {
         //1 Login on JDI site as User
         // TODO create a CONSTANT for this particular user.
         // done
-        User piterUser = new User(UserEnum.PITER_CHAILOVSKII);
-        EpamSite.homePage.headerSection.login(piterUser);
+        EpamSite.homePage.headerSection.login(User.PITER_CHAILOVSKII);
 
         //2 Open Metals & Colors page by Header headerMenu
         EpamSite.homePage.headerSection.headerMenu.mySelect(EpamPagesEnum.METALS_COLORS);
@@ -41,8 +38,7 @@ public class MetalsColorsTest extends TestInit {
         // TODO you should make a CONSTANT for this particular data, like User
         // done
         //3 Fill form Metals & Colors by data
-        MetalsColors defaultMetalsColorsData = new MetalsColors(MetalsColorsDataEnum.DEFAULT_DATA);
-        EpamSite.metalsColorsPage.metalsColorsForm.fillMetalsColorsForm(defaultMetalsColorsData);
+        EpamSite.metalsColorsPage.metalsColorsForm.fillMetalsColorsForm(MetalsColors.DEFAULT_DATA);
 
         // TODO this should not be here, encapsulate it in one of the UI Elements
         // TODO take a look on login feature...
@@ -54,6 +50,6 @@ public class MetalsColorsTest extends TestInit {
         // at hw7.MetalsColorsTest.submitMetalsColorsForm(MetalsColorsTest.java:48)
         // done
         //4 Check result section
-        EpamSite.metalsColorsPage.metalsColorsResultSection.checkResultSection(defaultMetalsColorsData);
+        EpamSite.metalsColorsPage.metalsColorsResultSection.checkResultSection(MetalsColors.DEFAULT_DATA);
     }
 }

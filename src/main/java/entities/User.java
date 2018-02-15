@@ -1,16 +1,14 @@
 package entities;
 
-import com.epam.commons.DataClass;
-import enums.UserEnum;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-public class User extends DataClass {
-    public final String login;
-    public final String password;
-    public final String name;
+@Getter
+@AllArgsConstructor
+public class User {
+    private String login;
+    private String password;
+    private String name;
 
-    public User(UserEnum userEnum) {
-        this.login = userEnum.login;
-        this.password = userEnum.password;
-        this.name = userEnum.name;
-    }
+    public static final User PITER_CHAILOVSKII = new User("epam", "1234", "Piter Chailovskii");
 }

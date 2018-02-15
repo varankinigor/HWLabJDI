@@ -7,6 +7,7 @@ import entities.MetalsColors;
 import org.openqa.selenium.support.FindBy;
 import utils.LogWork;
 
+import java.util.Arrays;
 import java.util.Map;
 
 public class MetalsColorsResultSection extends Section {
@@ -23,7 +24,9 @@ public class MetalsColorsResultSection extends Section {
         for (String key : expectedLogMap.keySet()) {
             // TODO message should contains expected and actual results...
             // done
-            Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key),"Actual key: " + actualLogMap.get(key) + " Expected key: " + expectedLogMap.get(key));
+            Arrays.sort(actualLogMap.get(key));
+            Arrays.sort(expectedLogMap.get(key));
+            Assert.arrayEquals(actualLogMap.get(key), expectedLogMap.get(key));
         }
     }
 }

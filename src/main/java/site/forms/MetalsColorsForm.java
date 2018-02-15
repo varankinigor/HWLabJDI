@@ -40,7 +40,7 @@ public class MetalsColorsForm extends Form {
             root = @FindBy(css = "#salad-dropdown"),
             list = @FindBy(css = "ul li"),
             value = @FindBy(css = ".btn"),
-            expand= @FindBy(css = ".caret")
+            expand = @FindBy(css = ".caret")
     )
     private Dropdown vegetablesDropdown;
 
@@ -48,15 +48,19 @@ public class MetalsColorsForm extends Form {
     private Button submitButton;
 
     public void fillMetalsColorsForm(MetalsColors metalsColors) {
-        oddsSelector.select(metalsColors.summary[0].toString());
-        evenSelector.select(metalsColors.summary[1].toString());
-
-        elementsCheckList.check(metalsColors.elements);
-
-        colorsDropdown.select(metalsColors.color);
-
-        metalsComboBox.select(metalsColors.metals);
-
+        if (metalsColors.getSummary().length == 2) {
+            oddsSelector.select(metalsColors.getSummary()[0].toString());
+            evenSelector.select(metalsColors.getSummary()[1].toString());
+        }
+        if (metalsColors.getElements().length != 0) {
+            elementsCheckList.check(metalsColors.getElements());
+        }
+        if (metalsColors.getColor().length() != 0) {
+            colorsDropdown.select(metalsColors.getColor());
+        }
+        if (metalsColors.getMetals().length() != 0) {
+            metalsComboBox.select(metalsColors.getMetals());
+        }
         // TODO you should create you own UI Element for this purpose...
         // TODO maybe it will be better to extends it from Dropdown or smth else ?
         // done
@@ -65,7 +69,7 @@ public class MetalsColorsForm extends Form {
                 vegetablesDropdown.select(vegetable);
             }
         }
-        for (String vegetable : metalsColors.vegetables) {
+        for (String vegetable : metalsColors.getVegetables()) {
             vegetablesDropdown.select(vegetable);
         }
 
