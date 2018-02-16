@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class DataLoader {
 
-    public Object[][] data;
+    public Object[] data;
 
     @SneakyThrows
     public DataLoader() {
@@ -20,16 +20,6 @@ public class DataLoader {
         Map<String, MetalsColors> metalsColorsData = new Gson().fromJson(jsonObject, new TypeToken<Map<String, MetalsColors>>() {
         }.getType());
 
-        // TODO i don't get it, what is the point of two-dimensional array ??
-        // TODO why don't you return just a metalsColorsData.values() ? What a story, Mark ?
-        // Danila said to use two-dimensional array on data provider, after one student used one-dimensional,
-        // so i thought it's kind of rule. Maybe i don't understand him correctly
-        // TODO is that make a sense in this particular case ?
-        data = new Object[metalsColorsData.size()][];
-        Object[] values = metalsColorsData.values().toArray();
-        for (int i = 0; i < values.length; i++) {
-            // TODO is that not enough 'data[i][0] = values[i]' ?
-            data[i] = new Object[]{values[i]};
-        }
+        data = metalsColorsData.values().toArray();
     }
 }

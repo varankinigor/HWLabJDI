@@ -25,7 +25,7 @@ public class MetalsColorsDPTest extends TestInit {
     }
 
     @DataProvider
-    public Object[][] getData() {
+    public Object[] getData() {
         DataLoader dataLoader = new DataLoader();
         return dataLoader.data;
     }
