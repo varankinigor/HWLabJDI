@@ -14,6 +14,9 @@ public class DataLoader {
 
     public Object[] data;
 
+    // TODO you can do it in this way, but from my perspective,
+    // TODO DataLoader should have static method for this purpose. It is not make a sense to create an instance of this class
+    // TODO you should not load any data more than once
     @SneakyThrows
     public DataLoader() {
         JsonObject jsonObject = new JsonParser().parse(new FileReader("src/main/resources/ex8_jdi_metalsColorsDataSet.json")).getAsJsonObject();
