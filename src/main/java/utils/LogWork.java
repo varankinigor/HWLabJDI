@@ -11,7 +11,6 @@ public class LogWork {
     public static Map<String, String> prepareLog(TextList textList) {
         Map<String, String> resultLog = new HashMap<>();
         List<String> logList = textList.getTextList();
-        // TODO soo complicated, but okay, if you're enjoying this...
         for (String log : logList) {
             for (MetalsColorsKeysEnum key : MetalsColorsKeysEnum.values()) {
                 if (log.startsWith(key.text)) {

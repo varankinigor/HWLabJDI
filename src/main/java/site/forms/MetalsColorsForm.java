@@ -11,6 +11,8 @@ import com.epam.jdi.uitests.web.selenium.elements.pageobjects.annotations.object
 import entities.MetalsColors;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Arrays;
+
 public class MetalsColorsForm extends Form {
 
     @FindBy(css = "#odds-selector p")
@@ -87,16 +89,8 @@ public class MetalsColorsForm extends Form {
 
         metalsComboBox.select(metalsColors.getMetals());
 
-        // TODO you should create you own UI Element for this purpose...
-        // TODO maybe it will be better to extends it from Dropdown or smth else ?
-        // TODO what dou you mean 'done' ? I do not see any difference...
-        // TODO take a look on elementsCheckList, i refactored it for you...
-        for (String vegetable : vegetablesDropdown.getText().split(", ")) {
-            vegetablesDropdown.select(vegetable);
-        }
-        for (String vegetable : metalsColors.getVegetables()) {
-            vegetablesDropdown.select(vegetable);
-        }
+        Arrays.asList(vegetablesDropdown.getText().split(", ")).forEach(vegetablesDropdown::select);
+        Arrays.asList(metalsColors.getVegetables()).forEach(vegetablesDropdown::select);
 
         submitButton.click();
     }
